@@ -12,10 +12,11 @@ if (!isset($_SESSION['user_id']) || $_SESSION['logged_in'] !== true) {
 /* =========================================================
    DATABASE CONFIGURATION
 ========================================================= */
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "rudra_edutech";
+$db_host = getenv("DB_HOST") ?: "localhost";
+$db_user = getenv("DB_USER") ?: "root";
+$db_pass = getenv("DB_PASS");
+$db_pass = ($db_pass === false) ? "" : $db_pass;
+$db_name = getenv("DB_NAME") ?: "rudra_edutech";
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 if ($conn->connect_error) {
