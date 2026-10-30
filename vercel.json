@@ -1,0 +1,62 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/index.php"
+    },
+    {
+      "source": "/index.php",
+      "destination": "/api/index.php"
+    },
+    {
+      "source": "/about.php",
+      "destination": "/api/about.php"
+    },
+    {
+      "source": "/client.php",
+      "destination": "/api/client.php"
+    },
+    {
+      "source": "/contact.php",
+      "destination": "/api/contact.php"
+    },
+    {
+      "source": "/course.php",
+      "destination": "/api/course.php"
+    },
+    {
+      "source": "/Blog.php",
+      "destination": "/api/Blog.php"
+    },
+    {
+      "source": "/Testimonials.php",
+      "destination": "/api/Testimonials.php"
+    },
+    {
+      "source": "/services.php",
+      "destination": "/api/services.php"
+    },
+    {
+      "source": "/gallery.php",
+      "destination": "/api/gallery.php"
+    },
+    {
+      "source": "/login.php",
+      "destination": "/api/login.php"
+    },
+    {
+      "source": "/logout.php",
+      "destination": "/api/logout.php"
+    },
+    {
+      "source": "/manage_gallery.php",
+      "destination": "/api/manage_gallery.php"
+    }
+  ]
+}
